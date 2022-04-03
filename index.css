@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+	/* Primary Color */
+	--blue: hsl(223, 87%, 63%);
+
+	/* Secondary Colors */
+	--paleBlue: hsl(223, 100%, 88%);
+	--lightRed: hsl(354, 100%, 66%);
+
+	/* Neutral Colors */
+	--gray: hsl(0, 0%, 59%);
+	--veryDarkBlue: hsl(209, 33%, 12%);
+
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 20px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Mobile Viewport */
+body {
+	height: min-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main {
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	gap: 3rem;
+}
+
+.subscribe {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.subscribe img {
+	width: 17%;
+	margin-bottom: 1rem;
+}
+
+.subscribe h1 {
+	text-align: center;
+	font-size: 1rem;
+	color: var(--gray);
+	font-weight: 300;
+}
+
+.subscribe strong {
+	font-weight: 700;
+	color: var(--veryDarkBlue);
+}
+
+.subscribe p {
+	font-size: .6rem;
+	color: var(--veryDarkBlue);
+}
+
+.subscription {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: .5rem;
+}
+
+input,
+button {
+	height: 2rem;
+	border-radius: 1rem;
+	border: none;
+	transition: 0.2s;
+}
+
+input {	
+	padding-left: 1.5rem;
+}
+
+input::placeholder {
+	color: var(--gray);
+	font-weight: 300;
+}
+
+#errorMessage {
+	color: var(--lightRed);
+	font-size: .5rem;
+	text-align: center;
+	font-weight: 300;
+	margin-bottom: .7rem;
+}
+
+/* class to add/remove on input */
+.valid-input {
+	outline: .1rem solid var(--paleBlue);
+}
+
+.invalid-input {
+	outline: .1rem solid var(--lightRed);
+}
+
+/* class to add/remove on #errorMessage */
+.hide-error-msg {
+	display: none;
+}
+
+.show-error-msg {
+	display: block;
+}
+
+button {
+	background-color: var(--blue);
+	color: white;
+	box-shadow: 0 .05rem .3rem var(--blue);
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--paleBlue);
+}
+
+.img-container img {
+	width: 100%;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .7rem;
+	padding: 1rem;
+	color: var(--blue);
+}
+
+.fa-brands {
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid var(--paleBlue);
+	border-radius: 50%;
+	padding: .7rem;
+	font-size: .7rem;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.fa-brands:hover {
+	background-color: var(--blue);
+	color: white;
+}
+
+.fa-brands:nth-child(1),
+.fa-brands:nth-child(2),
+.fa-brands:nth-child(3) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer p {
+ text-align: center;
+ color: var(--gray);
+ font-size: .5rem;
+}
+
+/* Desktop Viewport */
+@media screen and (min-width: 800px) {
+
+	main {
+		width: 50vw;
+	}
+
+	.subscribe {
+		position: relative;
+	}
+
+	.subscribe img {
+		width: 10%;
+	}
+
+	.subscribe h1 {
+		text-align: center;
+		font-size: 2rem;
+		color: var(--gray);
+		font-weight: 300;
+	}
+	
+	.subscribe strong {
+		font-weight: 700;
+		color: var(--veryDarkBlue);
+	}
+	
+	.subscribe p {
+		font-size: .8rem;
+		color: var(--veryDarkBlue);
+	}
+
+	.subscription {
+		flex-direction: row;
+	}
+
+	input,
+	button {
+		height: 2.2rem;
+		border-radius: 1rem;
+		border: none;
+		font-size: .8rem;
+	}
+
+	input {
+		flex-basis: 70%;
+	}
+
+	button {
+		flex-basis: 30%;
+	}
+
+	#errorMessage {
+		position: absolute;
+		bottom: -2.2rem;
+		left: 1rem;
+		font-size: .7rem;
+		text-align: initial;
+	}
+
+	.img-container img {
+		width: 100%;
+	}
+
+	.fa-brands {
+		width: 2rem;
+		height: 2rem;
+		border: 1px solid var(--paleBlue);
+		border-radius: 50%;
+		padding: 1rem;
+		font-size: 1rem;
+	}
+
+	footer p {
+		text-align: center;
+		color: var(--gray);
+		font-size: .7rem;
+	}
+}
